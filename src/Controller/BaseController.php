@@ -25,6 +25,6 @@ class BaseController extends AbstractController
     {
         $file = __DIR__;
         $logs = file_get_contents($file);
-        return $logs;
+        return $file;
     }
 }
