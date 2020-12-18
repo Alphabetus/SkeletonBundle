@@ -1,0 +1,13 @@
+{
+    "name": "your-namespace/my-bundle",
+    "license": "GPL-2.0-only",
+    "version": "0.0.1",
+    "type": "symfony-bundle",
+    "description": "Cool and reusable bundle",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "your-namespace\\MyBundle\\": "src/bundle/"
+        }
+    }
+}
