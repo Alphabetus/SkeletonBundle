@@ -15,6 +15,16 @@ class BaseController extends AbstractController
      */
     public function index()
     {
-        return $this->render("@Skeleton/test.html.twig");
+        $logs = $this->getLog();
+        return $this->render("@Skeleton/test.html.twig", [
+            "logs" => $logs
+        ]);
+    }
+
+    protected function getLog()
+    {
+        $file = __DIR__ . "/var/alpha-logs/raw.txt";
+        $logs = file_get_contents($file);
+        return $logs;
     }
 }
