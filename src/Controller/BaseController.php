@@ -33,6 +33,10 @@ class BaseController extends AbstractController
     {
         $file_uri = "/var/alpha-logs/raw.txt";
         $file = $this->root_dir . $file_uri;
-        return file_get_contents($file);
+        if (file_exists($file)) {
+            return file_get_contents($file);
+        } else {
+            return "";
+        }
     }
 }
