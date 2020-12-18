@@ -1,5 +1,5 @@
 skeleton.test:
-  path: /b/t
+  path: /_logs
   controller: Alphabetus\Bundle\SkeletonBundle\Controller\BaseController::index
 
   #path: /blog

@@ -12,7 +12,6 @@ class BaseController extends AbstractController
 {
     /**
      * @return Response
-     * @Route("/_logs", name="bundle.test")
      */
     public function index()
     {
