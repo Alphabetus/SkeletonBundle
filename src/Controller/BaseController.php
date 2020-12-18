@@ -25,14 +25,15 @@ class BaseController extends AbstractController
     public function index()
     {
         $logs = $this->getLog();
+        $logs_array = explode("--------------------------------------", $logs);
         return $this->render("@Skeleton/test.html.twig", [
-            "logs" => $logs
+            "logs" => $logs_array
         ]);
     }
 
     protected function getLog()
     {
-        $file_uri = "/var/alpha-logs/raw.txt";
+        $file_uri = "/var/alpha-dump/dump.txt";
         $file = $this->root_dir . $file_uri;
         if (file_exists($file)) {
             return file_get_contents($file);
