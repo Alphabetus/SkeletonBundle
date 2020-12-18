@@ -1,13 +1,12 @@
 {
-    "name": "your-namespace/my-bundle",
+    "name": "alphabetus/example-bundle",
     "license": "GPL-2.0-only",
     "version": "0.0.1",
     "type": "symfony-bundle",
-    "description": "Cool and reusable bundle",
-    "minimum-stability": "dev",
+    "description": "work in progress",
     "autoload": {
         "psr-4": {
-            "your-namespace\\MyBundle\\": "src/bundle/"
+            "Alphabetus\\ExampleBundle\\": "src/"
         }
     }
 }
