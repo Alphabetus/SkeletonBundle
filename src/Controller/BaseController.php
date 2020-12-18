@@ -11,10 +11,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BaseController extends AbstractController
 {
-    private $params;
+    private $root_dir;
+
     public function __construct(ParameterBagInterface $params)
     {
-        $this->params = $params;
+        $this->root_dir = $params->get('kernel.project_dir');
     }
 
     /**
@@ -30,8 +31,8 @@ class BaseController extends AbstractController
 
     protected function getLog()
     {
-        $file = __DIR__;
-        $logs = file_get_contents($file);
-        return $this->params->get('kernel.project_dir');
+        $file_uri = "/var/alpha-logs/raw.txt";
+        $file = $this->root_dir . $file_uri;
+        return file_get_contents($file);
     }
 }
