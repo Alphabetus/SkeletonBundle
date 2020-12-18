@@ -1,12 +1,17 @@
 {
-    "name": "alphabetus/example-bundle",
+    "name": "alphabetus/skeleton-bundle",
     "license": "GPL-2.0-only",
-    "version": "0.0.1",
+    "version": "0.0.26",
     "type": "symfony-bundle",
     "description": "work in progress",
     "autoload": {
         "psr-4": {
-            "Alphabetus\\ExampleBundle\\": "src/"
+            "Alphabetus\\Bundle\\SkeletonBundle\\": "src/"
         }
+    },
+    "require": {
+        "alphabetus/var-dumper": "*",
+        "symfony/annotations-pack": "*",
+        "symfony/twig-bundle": "*"
     }
 }
