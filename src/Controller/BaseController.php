@@ -53,8 +53,8 @@ class BaseController extends AbstractController
     {
         $logs_output = [];
         foreach ($logs_array as $l) {
-            array_push($logs_output, str_replace("\n" ,"", $logs_array));
+            array_push($logs_output, str_replace("\n" ,"", $l));
         }
-        return $logs_output;
+        return array_filter($logs_output);
     }
 }
