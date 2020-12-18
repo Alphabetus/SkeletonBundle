@@ -20,6 +20,7 @@ class BaseController extends AbstractController
 
     /**
      * @return Response
+     * @Route("/_logs", name="logger.index")
      */
     public function index()
     {
