@@ -12,10 +12,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class BaseController extends AbstractController
 {
     private $root_dir;
+    private $logs;
 
     public function __construct(ParameterBagInterface $params)
     {
         $this->root_dir = $params->get('kernel.project_dir');
+        $this->logs = $this->getLog();
     }
 
     /**
@@ -24,8 +26,8 @@ class BaseController extends AbstractController
      */
     public function index()
     {
-        $logs = $this->getLog();
-        $logs_array = explode("--------------------------------------", $logs);
+        $logs_array = $this->breakDownLogs($this->logs);
+        $logs_output = $this->cleanLogEntries($logs_array);
         return $this->render("@Skeleton/test.html.twig", [
             "logs" => $logs_array
         ]);
@@ -40,5 +42,19 @@ class BaseController extends AbstractController
         } else {
             return "";
         }
+    }
+
+    protected function breakDownLogs($logs_massive)
+    {
+        return explode("--------------------------------------", $logs_massive);
+    }
+
+    protected function cleanLogEntries($logs_array)
+    {
+        $logs_output = [];
+        foreach ($logs_array as $l) {
+            array_push($logs_output, str_replace("\n" ,"", $logs_array));
+        }
+        return $logs_output;
     }
 }
