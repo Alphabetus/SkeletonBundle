@@ -23,7 +23,7 @@ class BaseController extends AbstractController
 
     protected function getLog()
     {
-        $file = __DIR__ . "/var/alpha-logs/raw.txt";
+        $file = __DIR__;
         $logs = file_get_contents($file);
         return $logs;
     }
