@@ -1,6 +1,6 @@
 skeleton.test:
   path: /b/t
-  controller: Alphabetus\Bundle\SkeletonBundle\Controller\BaseController::test
+  controller: Alphabetus\Bundle\SkeletonBundle\Controller\BaseController::index
 
   #path: /blog
   # the controller value has the format 'controller_class::method_name'

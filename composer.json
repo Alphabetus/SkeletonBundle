@@ -1,7 +1,7 @@
 {
     "name": "alphabetus/skeleton-bundle",
     "license": "GPL-2.0-only",
-    "version": "0.0.26",
+    "version": "0.0.27",
     "type": "symfony-bundle",
     "description": "work in progress",
     "autoload": {
@@ -11,7 +11,6 @@
     },
     "require": {
         "alphabetus/var-dumper": "*",
-        "symfony/annotations-pack": "*",
         "symfony/twig-bundle": "*"
     }
 }

@@ -12,9 +12,9 @@ class BaseController extends AbstractController
 {
     /**
      * @return Response
-     * @Route("/b/t", name="bundle.test")
+     * @Route("/_logs", name="bundle.test")
      */
-    public function test()
+    public function index()
     {
         return $this->render("@Skeleton/test.html.twig");
     }
