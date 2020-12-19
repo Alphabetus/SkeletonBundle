@@ -4,7 +4,7 @@ namespace Alphabetus\Bundle\Installer;
 
 class Installer
 {
-    public function run()
+    public static function run()
     {
         file_put_contents("text.txt", "works");
     }

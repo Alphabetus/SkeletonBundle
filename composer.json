@@ -4,12 +4,6 @@
     "version": "0.0.34",
     "type": "symfony-bundle",
     "description": "work in progress",
-    "autoload": {
-        "psr-4": {
-            "Alphabetus\\Bundle\\Installer\\": "src/Installer",
-            "Alphabetus\\Bundle\\SkeletonBundle\\": "src/"
-        }
-    },
     "require": {
         "alphabetus/var-dumper": "*",
         "symfony/twig-bundle": "*",
@@ -18,15 +12,12 @@
     "scripts": {
         "post-update-cmd": [
             "Alphabetus\\Bundle\\Installer::run"
-        ],
-        "post-package-update": [
-            "Alphabetus\\Bundle\\Installer::run"
-        ],
-        "post-install-cmd": [
-            "Alphabetus\\Bundle\\Installer::run"
-        ],
-        "post-package-install": [
-            "Alphabetus\\Bundle\\Installer::run"
         ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Alphabetus\\Bundle\\Installer\\": "src/Installer",
+            "Alphabetus\\Bundle\\SkeletonBundle\\": "src/"
+        }
     }
 }
