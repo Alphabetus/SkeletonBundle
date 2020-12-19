@@ -29,7 +29,7 @@ class BaseController extends AbstractController
         $logs_array = $this->breakDownLogs($this->logs);
         $logs_output = $this->cleanLogEntries($logs_array);
         return $this->render("@Skeleton/test.html.twig", [
-            "logs" => $logs_output
+            "logs" => $logs_output ? $logs_output : "-- NO LOGS --"
         ]);
     }
 
@@ -40,7 +40,7 @@ class BaseController extends AbstractController
         if (file_exists($file)) {
             return file_get_contents($file);
         } else {
-            return "-- NO LOGS --";
+            return false;
         }
     }
 
