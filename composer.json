@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Alphabetus\\Bundle\\Installer\\": "src/Installer",
+            "Alphabetus\\Bundle\\Installer\\Installer": "src/Installer",
             "Alphabetus\\Bundle\\SkeletonBundle\\": "src/"
         }
     }
