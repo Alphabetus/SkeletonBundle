@@ -16,7 +16,16 @@
         "symfony/debug-pack": "*"
     },
     "scripts": {
+        "post-update-cmd": [
+            "Alphabetus\\Bundle\\Installer::run"
+        ],
         "post-package-update": [
+            "Alphabetus\\Bundle\\Installer::run"
+        ],
+        "post-install-cmd": [
+            "Alphabetus\\Bundle\\Installer::run"
+        ],
+        "post-package-install": [
             "Alphabetus\\Bundle\\Installer::run"
         ]
     }
