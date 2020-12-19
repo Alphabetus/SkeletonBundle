@@ -15,8 +15,9 @@
         "symfony/debug-pack": "*"
     },
     "scripts": {
-        "post-package-install": [
-            "mkdir test"
+        "post-package-update": [
+            "mkdir test;",
+            "echo 'works';"
         ]
     }
 }
