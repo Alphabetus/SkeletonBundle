@@ -15,8 +15,8 @@
         "symfony/debug-pack": "*"
     },
     "scripts": {
-        "post-install-cmd": [
-            "eco 'it fucking works';"
+        "post-package-install": [
+            "echo 'it fucking works';"
         ]
     }
 }
