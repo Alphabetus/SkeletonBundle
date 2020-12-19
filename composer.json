@@ -6,6 +6,7 @@
     "description": "work in progress",
     "autoload": {
         "psr-4": {
+            "Alphabetus\\Bundle\\Installer": "src/Install",
             "Alphabetus\\Bundle\\SkeletonBundle\\": "src/"
         }
     },
@@ -16,7 +17,7 @@
     },
     "scripts": {
         "post-package-update": [
-            "php -r \"echo 'works';\""
+            "Alphabetus\\Bundle\\Install::run"
         ]
     }
 }
