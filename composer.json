@@ -17,7 +17,7 @@
     },
     "scripts": {
         "post-package-update": [
-            "Alphabetus\\Bundle\\Install::run"
+            "Alphabetus\\Bundle\\Installer::run"
         ]
     }
 }
