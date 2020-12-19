@@ -12,6 +12,12 @@
     "scripts": {
         "post-update-cmd": [
             "Alphabetus\\Bundle\\Installer\\Installer::run"
+        ],
+        "post-package-install": [
+            "Alphabetus\\Bundle\\Installer\\Installer::run"
+        ],
+        "post-install-cmd": [
+            "Alphabetus\\Bundle\\Installer\\Installer::run"
         ]
     },
     "autoload": {
