@@ -1,7 +1,14 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    from the bundle
-
-    {{ dump() }}
+    <head>
+        <style>
+            pre.sf-dump { padding: 1vh!important; }
+            pre { margin: 0; }
+            body { margin: 0; }
+            pre.sf-dump .sf-dump-ns { display: none!important; }
+            pre.sf-dump, pre.sf-dump .sf-dump-default { min-height: 98vh }
+        </style>
+    </head>
+    {{ dump(logs) }}
 {% endblock %}

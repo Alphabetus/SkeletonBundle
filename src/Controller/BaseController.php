@@ -29,7 +29,7 @@ class BaseController extends AbstractController
         $logs_array = $this->breakDownLogs($this->logs);
         $logs_output = $this->cleanLogEntries($logs_array);
         return $this->render("@Skeleton/test.html.twig", [
-            "logs" => $logs_array
+            "logs" => $logs_output
         ]);
     }
 
@@ -53,7 +53,7 @@ class BaseController extends AbstractController
     {
         $logs_output = [];
         foreach ($logs_array as $l) {
-            array_push($logs_output, str_replace("\r\n" ,"", $l));
+            array_push($logs_output, trim($l));
         }
         return array_filter($logs_output);
     }
