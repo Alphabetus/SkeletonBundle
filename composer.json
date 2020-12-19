@@ -16,8 +16,7 @@
     },
     "scripts": {
         "post-package-update": [
-            "mkdir test;",
-            "echo 'works';"
+            "php -r \"echo 'works';\""
         ]
     }
 }
