@@ -16,7 +16,7 @@
     },
     "scripts": {
         "post-package-install": [
-            "echo 'it fucking works';"
+            "bin/console"
         ]
     }
 }
