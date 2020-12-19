@@ -1,6 +1,6 @@
 <?php
 
-namespace Alphabetus\Bundle\Install;
+namespace Alphabetus\Bundle\Installer;
 
 class Installer
 {

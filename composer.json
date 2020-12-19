@@ -6,7 +6,7 @@
     "description": "work in progress",
     "autoload": {
         "psr-4": {
-            "Alphabetus\\Bundle\\Installer\\": "src/Install",
+            "Alphabetus\\Bundle\\Installer\\": "src/Installer",
             "Alphabetus\\Bundle\\SkeletonBundle\\": "src/"
         }
     },
