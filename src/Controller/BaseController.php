@@ -40,7 +40,7 @@ class BaseController extends AbstractController
         if (file_exists($file)) {
             return file_get_contents($file);
         } else {
-            return "";
+            return "-- NO LOGS --";
         }
     }
 
